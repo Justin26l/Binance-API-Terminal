@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Auth</title>
+</head>
+<body>
+    <h1>Pls wait a second</h1>
+    <form action="{{ url_for('dashboard') }}" method="post" style="display: none;">
+        <input name="user" id="form21" />
+        <input name="pass" id="form22" />
+        <button id="clk" type="submit" >pls wait a sec</button>
+    </form>
+    <script>us=localStorage.getItem('fr21');ps=localStorage.getItem('fr22');if (us != null && ps != null){document.getElementById('form21').value=us;document.getElementById('form22').value=ps;document.getElementById('clk').click();}else{location.href="/"}</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "pair": [
+        {
+            "id": "b8541019b1049a1a29df2f4168adea8b36ddbb284562997e26524c8d16a4ff24",
+            "nickname": "BTC DEMO pair",
+            "futuresType": "usd-m",
+            "symbol": "BTCUSDT",
+            "marginType": "CROSSED",
+            "leverage": "100",
+            "margin": 0.2,
+            "tp": 4.0,
+            "sl": 2.0
+        }
+    ]
+}

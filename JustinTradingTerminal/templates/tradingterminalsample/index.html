@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Trading Terminal</title>
+    <style>
+        .center{text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="center">
+        <form style="width: 50%;margin:20% auto auto auto;"  action="{{ url_for('dashboard') }}" method="post">
+            <h1>Trading Terminal</h1>
+            <p class="text-danger fw-bold">DEMO</p>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form21">Username</label>
+                <input type="text" name="user" placeholder="input '{{loginuser}}'" id="form21" class="form-control" />
+            </div>
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form22">Password</label>
+                <input type="password" name="pass" placeholder="input '{{loginpass}}'" id="form22" class="form-control" />
+            </div>
+
+            <button type="submit" onclick="setGGG()" class="btn btn-primary btn-block mb-4">Sign in</button>
+        </form>
+    </div>
+    <script>
+        function setGGG(){
+            localStorage.setItem('fr21',document.getElementById('form21').value);
+            localStorage.setItem('fr22',document.getElementById('form22').value);
+        }
+        
+    </script>
+</body>
+</html>
