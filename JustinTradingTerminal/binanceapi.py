@@ -148,37 +148,23 @@ def SetSL(ApiKey:str,ApiSecret:str,futuresType:str,SL_symbol:str,SL_side:str,SL_
 # url='https://testnet.binancefuture.com/fapi/v1/allOpenOrders'
 testnet=True
 urlhead='https://'
-# domain='.binance.com/'
 domain='.binancefuture.com/'
+# domain='.binance.com/'
 
-apiKey='9ef7ed2db9de19f8b38056abefc3d18237e826aae02bea548c8f6c2a55ba9cc1'
-secretKey='236586d2c0788febb9a4b2a7a0865ea75a0cf1642867639e39dbda44a4e154f0'
+# apiKey='9ef7ed2db9de19f8b38056abefc3d18237e826aae02bea548c8f6c2a55ba9cc1'
+# secretKey='236586d2c0788febb9a4b2a7a0865ea75a0cf1642867639e39dbda44a4e154f0'
 
-Symbol = 'BTCUSDT'
-Side = 'BUY' # 'BUY' 'SELL'
-Quantity=0.001
-Price=40000
-TP_Price=24000
-SL_Price=19000
+# Symbol = 'BTCUSDT'
+# Side = 'BUY' # 'BUY' 'SELL'
+# Quantity=0.001
+# Price=40000
+# TP_Price=24000
+# SL_Price=19000
 
 # print(ChangeLeverage(apiKey,secretKey,'usd-m',Symbol,10))
 # print(ClearOpenOrder(apiKey,secretKey,'usd-m',Symbol))
-print(EntryMarket(apiKey,secretKey,'usd-m',Symbol,Side,Quantity,"CustomID"))
-print(SetTP(apiKey,secretKey,'usd-m',Symbol,Side,TP_Price,Quantity))
-print(SetSL(apiKey,secretKey,'usd-m',Symbol,Side,SL_Price,Quantity))
+# print(EntryMarket(apiKey,secretKey,'usd-m',Symbol,Side,Quantity,"CustomID"))
+# print(SetTP(apiKey,secretKey,'usd-m',Symbol,Side,TP_Price,Quantity))
+# print(SetSL(apiKey,secretKey,'usd-m',Symbol,Side,SL_Price,Quantity))
 # CloseMarket
-# TPSL will auto convert order side
-
-# def CloseWithAll(ApiKey:str,ApiSecret:str,futuresType:str,aO_symbol:str,aO_side:str):
-#     aO_URL=urlhead+ROUTES(futuresType)+domain+ROUTES(futuresType)+'/v1/allOrders'
-#     aO_Head={'X-MBX-APIKEY': ApiKey}
-#     aO_Query=f'symbol={aO_symbol}&timestamp={localTimeMS()}'
-#     aO_Data=f'{aO_Query}&signature={HMAC_SHA256(ApiSecret,aO_Query)}'
-#     Order=json.loads(requests.get(aO_URL,headers=aO_Head,params=aO_Data).text)
-#     print(Order)
-    
-#     for x in Order:
-#         if (x["status"] == "FILLED") and ("CloseWithAll" in x["clientOrderId"]) and (x['reduceOnly'] == False) and (x['side']==aO_side):
-#             if x['side'] == 'BUY'  : side='SELL'
-#             if x['side'] == 'SELL' : side='BUY'
-#             print(CloseMarket(ApiKey,ApiSecret,x['symbol'],side,x['executedQty']))
+# TPSL will auto convert to order side by input
