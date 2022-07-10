@@ -13,6 +13,17 @@
         <input name="pass" id="form22" />
         <button id="clk" type="submit" >pls wait a sec</button>
     </form>
-    <script>us=localStorage.getItem('fr21');ps=localStorage.getItem('fr22');if (us != null && ps != null){document.getElementById('form21').value=us;document.getElementById('form22').value=ps;document.getElementById('clk').click();}else{location.href="/"}</script>
+    <script>
+        us=localStorage.getItem('fr21');
+        ps=localStorage.getItem('fr22');
+        if (us != null && ps != null){
+            document.getElementById('form21').value=us;
+            document.getElementById('form22').value=ps;
+            document.getElementById('clk').click();
+        }
+        else{
+            location.href="/"
+        }
+    </script>
 </body>
 </html>
