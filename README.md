@@ -1,11 +1,17 @@
-# Binance-API-Terminal
-### Base on Python 3, Required Flask   
+# Tradingview to BinanceAPI Terminal
+## Required  
+- **Python 3.10**  
+```  
+pip install flask  
+```  
+## Enable Mainnet Connection  
+Make Change in file **"binanceapi.py"**  
+- line 149 -> testnet = False  
+- line 151 -> comment  
+- line 152 -> uncomment  
+
+this build cost about 2 day, just add a webpage on api connector.  
+**Framework use :** Flask, Bootstrap, jQuery  
   
-## Enable mainnet connection  
-Change File "binanceapi.py"  
-line 149 -> "testnet=False"  
-line 151 -> comment  
-line 152 -> uncomment
-  
-Heroku DEMO -> https://terminal0000.herokuapp.com/
-DEMO support Testnet ONLY
+`* DEMO *` https://terminal0000.herokuapp.com/  
+**DEMO support Testnet ONLY**
